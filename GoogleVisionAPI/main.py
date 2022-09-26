@@ -3,17 +3,23 @@ import imageAna as IA
 import os
 ####################
 # main             #
-####################
-#Set token Key (no quotes on file path)
-#set GOOGLE_APPLICATION_CREDENTIALS=
+#########################################
+# Set token Key (no quotes on file path)#
+# set GOOGLE_APPLICATION_CREDENTIALS=   #
+#########################################
+
+# menu
 print("What would you like to run?")
 print("1. Labels")
 print("2. Run All")
 print("3. Chop Gif")
 
+# input for menu
 print("\n")
 choice = input ("Enter an option: ")
 
+
+# menu execution 
 if(choice == '1'):
     imageName = input("Enter image name:")
     GV.labels(imageName)
