@@ -31,4 +31,4 @@ elif(choice == '2'):
 elif(choice == '3'):
     imageName = input("Enter image name:")
     file_name = os.path.abspath('resources/pictures/' + imageName)
-    IA.processImage(file_name)
+    IA.getFrames(imageName, file_name, 4)

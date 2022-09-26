@@ -52,6 +52,7 @@
   <ItemGroup>
     <Folder Include="resources\" />
     <Folder Include="resources\csvs\" />
+    <Folder Include="resources\splitGifs\" />
     <Folder Include="resources\pictures\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
