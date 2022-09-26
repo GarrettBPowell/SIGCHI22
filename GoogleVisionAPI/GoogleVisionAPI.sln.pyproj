@@ -3,13 +3,14 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>d6f4bfdb-48a8-4008-925e-d961d01d9b21</ProjectGuid>
-    <ProjectHome>.</ProjectHome>
+    <ProjectHome>
+    </ProjectHome>
     <StartupFile>GoogleVisionAPI.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>GoogleVisionAPI</Name>
+    <Name>GoogleVisionAPI.sln</Name>
     <RootNamespace>GoogleVisionAPI</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -22,6 +23,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="GoogleVisionAPI.py" />
+    <Compile Include="main.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="imageAna.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="resources\pictures\anthony.jpg" />
@@ -39,7 +46,8 @@
     <Content Include="resources\pictures\thegang.jpg" />
     <Content Include="resources\pictures\what.webp" />
     <Content Include="resources\pictures\winter.gif" />
-    <Content Include="sigchiresearch-a6e68fcc79d4.json" />
+    <Content Include=".gitignore" />
+    <Content Include="key.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="resources\" />
