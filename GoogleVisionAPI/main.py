@@ -1,5 +1,5 @@
 import GoogleVisionAPI as GV
-import imageAna as IA
+import imageManip as Imanip
 import os
 from PIL import Image
 ####################
@@ -43,7 +43,7 @@ while runMenu:
     elif(choice == '3'):
         imageName = input("Enter gif name (no file extension): ")
         fileName = os.path.abspath('resources/pictures/' + imageName + '.gif')
-        IA.getFirstAndMiddleFrame(imageName, fileName)
+        Imanip.getFirstAndMiddleFrame(imageName, fileName)
         print("\n**********\nFirst and Middle frames saved in splitGifs folder\n**********\n")
 
      # Split single gif into first and middle frame
@@ -61,7 +61,7 @@ while runMenu:
             if(numFrames >= maxFrames):
                 print("Input too high. Enter another number")
 
-        IA.getXAmountOfFrames(imageName, fileName, numFrames)
+        Imanip.getXAmountOfFrames(imageName, fileName, numFrames)
         print("\n**********")
         print("{} frames from {}".format(numFrames, imageName))
         print("**********\n")

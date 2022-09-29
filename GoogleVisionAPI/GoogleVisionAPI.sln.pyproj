@@ -26,7 +26,7 @@
     <Compile Include="main.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="imageAna.py">
+    <Compile Include="imageManip.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
