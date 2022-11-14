@@ -31,7 +31,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="resources\pictures\anthony.jpg" />
     <Content Include="resources\pictures\aura.jpg" />
     <Content Include="resources\pictures\blink.gif" />
     <Content Include="resources\pictures\fat-cat-laser-eyes.gif" />

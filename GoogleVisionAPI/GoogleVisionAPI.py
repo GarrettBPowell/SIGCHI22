@@ -3,7 +3,7 @@ import imageManip
 import io
 import os
 from google.cloud import vision
-#set GOOGLE_APPLICATION_CREDENTIALS=C:\Users\garet\source\repos\GoogleVisionAPI\GoogleVisionAPI\sigchiresearch-a6e68fcc79d4.json
+
 
 
 def labels(image):
@@ -36,7 +36,7 @@ def folder(csvName):
     writer = csv.writer(csvFile)
     writer.writerow(["Name", "Labels"])
 
-    for files in listdir('resources/pictures'):
+    for files in os.listdir('resources/pictures'):
         # The name of the image file to annotate
         file_name = os.path.abspath('resources/pictures/' + files)
 

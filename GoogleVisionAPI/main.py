@@ -1,16 +1,21 @@
 import GoogleVisionAPI as GV
 import imageManip as Imanip
+import io
+from os import listdir
+from os.path import isfile, join
 import os
 from PIL import Image
 ####################
 # main             #
 #########################################
+#*THINGS THAT NEED TO GET DONE FOR SETUP#
 # Set token Key (no quotes on file path)#
+# use the below command to do so        #
 # set GOOGLE_APPLICATION_CREDENTIALS=   #
 #########################################
 
 runMenu = True
-options = ["Labels", "Run All in pictures folder", "Chop Gif (first and middle frame)", "Split gif into n frames", "Exit"]
+options = ["Labels", "Run All in pictures folder", "Chop Gif (first and middle frame)", "Chop MULTIPLE Gifs into (first and middle frame)", "Split gif into n frames", "Exit"]
 while runMenu:
     # menu
     print("\n\n\n\n*******************************************")
@@ -35,7 +40,7 @@ while runMenu:
 
     # All files in folder that produces csv with tags
     elif(choice == '2'):
-        csvName = input("Enter a name for CSV: ")
+        csvName = input("Enter a name for CSV output: ")
         GV.folder(csvName)
         print("\n**********\n{}.csv was saved in the CSV folder\n**********\n".format(csvName))
 
@@ -46,8 +51,15 @@ while runMenu:
         Imanip.getFirstAndMiddleFrame(imageName, fileName)
         print("\n**********\nFirst and Middle frames saved in splitGifs folder\n**********\n")
 
-     # Split single gif into first and middle frame
+    # Split many gifs into first and middle frame
     elif(choice == '4'):
+        for imageName in listdir('resources/pictures'):
+            fileName = os.path.abspath('resources/pictures/' + imageName)
+            Imanip.getFirstAndMiddleFrame(imageName.split('.')[0], fileName)
+        print("\n**********\nFirst and Middle frames saved in splitGifs folder\n**********\n")
+
+     # Split single gif into n frames
+    elif(choice == '5'):
         
         imageName = input("Enter gif name (no file extension): ")
         fileName = os.path.abspath('resources/pictures/' + imageName + '.gif')
