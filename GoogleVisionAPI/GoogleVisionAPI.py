@@ -10,7 +10,7 @@ def labels(image):
     client = vision.ImageAnnotatorClient()
 
     # The name of the image file to annotate
-    file_name = os.path.abspath('resources/pictures/' + image)
+    file_name = os.path.abspath('resources/input/' + image)
 
     # Loads the image into memory
     with io.open(file_name, 'rb') as image_file:
@@ -36,9 +36,9 @@ def folder(csvName):
     writer = csv.writer(csvFile)
     writer.writerow(["Name", "Labels"])
 
-    for files in os.listdir('resources/pictures'):
+    for files in os.listdir('resources/input'):
         # The name of the image file to annotate
-        file_name = os.path.abspath('resources/pictures/' + files)
+        file_name = os.path.abspath('resources/input/' + files)
 
         # Loads the image into memory
         with io.open(file_name, 'rb') as image_file:

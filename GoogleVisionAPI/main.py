@@ -18,7 +18,7 @@ runMenu = True
 options = ["Labels", "Run All in pictures folder", "Chop Gif (first and middle frame)", "Chop MULTIPLE Gifs into (first and middle frame)", "Split gif into n frames", "Exit"]
 while runMenu:
     # menu
-    print("\n\n\n\n*******************************************")
+    print("\n\n\n*******************************************")
     print("What would you like to run?")
     print("------------------------------")
     for i in range(len(options)):
@@ -47,22 +47,22 @@ while runMenu:
     # Split single gif into first and middle frame
     elif(choice == '3'):
         imageName = input("Enter gif name (no file extension): ")
-        fileName = os.path.abspath('resources/pictures/' + imageName + '.gif')
+        fileName = os.path.abspath('resources/input/' + imageName + '.gif')
         Imanip.getFirstAndMiddleFrame(imageName, fileName)
         print("\n**********\nFirst and Middle frames saved in splitGifs folder\n**********\n")
 
     # Split many gifs into first and middle frame
     elif(choice == '4'):
-        for imageName in listdir('resources/pictures'):
-            fileName = os.path.abspath('resources/pictures/' + imageName)
+        for imageName in listdir('resources/input'):
+            fileName = os.path.abspath('resources/input/' + imageName)
             Imanip.getFirstAndMiddleFrame(imageName.split('.')[0], fileName)
-        print("\n**********\nFirst and Middle frames saved in splitGifs folder\n**********\n")
+        print("\n**********\nCheck splitGifs folder for output\n**********\n")
 
      # Split single gif into n frames
     elif(choice == '5'):
         
         imageName = input("Enter gif name (no file extension): ")
-        fileName = os.path.abspath('resources/pictures/' + imageName + '.gif')
+        fileName = os.path.abspath('resources/input/' + imageName + '.gif')
         im = Image.open(fileName)
 
 

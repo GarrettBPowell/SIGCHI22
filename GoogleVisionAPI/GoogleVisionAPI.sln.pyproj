@@ -31,20 +31,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="resources\pictures\aura.jpg" />
-    <Content Include="resources\pictures\blink.gif" />
-    <Content Include="resources\pictures\fat-cat-laser-eyes.gif" />
-    <Content Include="resources\pictures\gif.gif" />
-    <Content Include="resources\pictures\giphy.gif" />
-    <Content Include="resources\pictures\monika.png" />
-    <Content Include="resources\pictures\nate.png" />
-    <Content Include="resources\pictures\prather.jpg" />
-    <Content Include="resources\pictures\pratherS.jpg" />
-    <Content Include="resources\pictures\rain-falling-on-cracked-ground-ryan-mcvay.jpg" />
-    <Content Include="resources\pictures\reading.gif" />
-    <Content Include="resources\pictures\thegang.jpg" />
-    <Content Include="resources\pictures\what.webp" />
-    <Content Include="resources\pictures\winter.gif" />
     <Content Include=".gitignore" />
     <Content Include="key.json" />
   </ItemGroup>
@@ -52,7 +38,7 @@
     <Folder Include="resources\" />
     <Folder Include="resources\csvs\" />
     <Folder Include="resources\splitGifs\" />
-    <Folder Include="resources\pictures\" />
+    <Folder Include="resources\input\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

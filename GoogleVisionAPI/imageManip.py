@@ -16,7 +16,13 @@ def getFirstAndMiddleFrame(fileName, gif):
     with Image.open(gif) as im:
         im.seek(0)
         im.save(os.path.abspath('resources/splitGifs/{}-{}-first-{}.png'.format(fileName, 0, ct.timestamp())))
-
-        midPoint = im.n_frames // 2
-        im.seek(midPoint)
-        im.save(os.path.abspath('resources/splitGifs/{}-{}-middle-{}.png'.format(fileName, midPoint, ct.timestamp())))
+        try:
+            midPoint = im.n_frames // 2
+            if(midPoint > 0):
+                im.seek(midPoint)
+                im.save(os.path.abspath('resources/splitGifs/{}-{}-middle-{}.png'.format(fileName, midPoint, ct.timestamp())))
+        except:
+            print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+            print("EXCEPTION")
+            print("Failed to get midpoint frame. You most likely did not pass a gif. \n\n")
+            print("File Name: {}\nFile Path: {}\n********************************".format(fileName, gif))
